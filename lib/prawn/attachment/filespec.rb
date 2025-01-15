@@ -20,6 +20,10 @@ module Prawn
         end
 
         @hidden = options[:hidden]
+
+        if options[:relationship]
+          @relationship = options[:relationship]
+        end
         @file = file
       end
 
@@ -36,12 +40,13 @@ module Prawn
         )
 
         obj.data[:Desc] = description if description
+        obj.data[:AFRelationship] = relationship if relationship
         obj
       end
 
       private
 
-      attr_reader :file, :description
+      attr_reader :file, :description, :relationship
     end
   end
 end
