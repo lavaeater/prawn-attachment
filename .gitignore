@@ -10,3 +10,4 @@
 *.pdf
 .rspec_status
 Gemfile.lock
+.idea/

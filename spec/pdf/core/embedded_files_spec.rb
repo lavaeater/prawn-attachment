@@ -43,7 +43,7 @@ RSpec.describe EmbeddedFiles do
     t = described_class.new
     t.embedded_files
 
-    pdf_object = "2 0 obj\n<< /Type /Names\n/EmbeddedFiles 3 0 R\n>>\nendobj\n"
+    pdf_object = "2 0 obj\n<< /EmbeddedFiles 3 0 R\n/Type /Names\n>>\nendobj\n"
     expect(t.names.object).to eq pdf_object
   end
 
